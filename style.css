@@ -1,4 +1,6 @@
-/* Style global */
+/* ===================================================
+   STYLE GLOBAL & REINITIALISATION
+   =================================================== */
 body {
     margin: 0;
     padding: 0;
@@ -8,7 +10,9 @@ body {
     text-align: center;
 }
 
-/* En-tête */
+/* ===================================================
+   EN-TÊTE ET NAVIGATION
+   =================================================== */
 .site-header {
     padding: 20px 10px;
     background-color: #1a1816;
@@ -23,7 +27,6 @@ body {
     color: #e0d8c3;
 }
 
-/* Liens du menu de navigation */
 .main-nav a {
     color: #e0d8c3;
     text-decoration: none;
@@ -34,19 +37,19 @@ body {
     padding-bottom: 2px;
 }
 
-/* Effet au survol des liens (couleur orange) */
 .main-nav a:hover {
     color: #ff8c00;
     border-bottom: 2px solid #ff8c00;
 }
 
-/* Page active */
 .main-nav a.active {
     border-bottom: 2px solid #ffffff;
     color: #ffffff;
 }
 
-/* Hero Section */
+/* ===================================================
+   HERO SECTION & BANNIÈRES
+   =================================================== */
 .hero-section {
     padding: 80px 20px;
     background-color: #1a1816;
@@ -66,21 +69,22 @@ body {
     color: #d6ccb8;
 }
 
-/* Bannière de séparation */
 .divider-banner {
-    width: 100vw;               /* Prend toute la largeur de la fenêtre */
+    width: 100vw;
     position: relative;
     left: 50%;
     right: 50%;
-    margin-left: -50vw;        /* Annule les marges des conteneurs parents */
+    margin-left: -50vw;
     margin-right: -50vw;
-    height: 30px;               /* Épaisseur de la bande (ajustable si besoin) */
-    background-color: #7a5833;  /* Couleur marron de votre thème */
+    height: 30px;
+    background-color: #7a5833;
     margin-top: 40px;
     margin-bottom: 40px;
 }
 
-/* Grille de cartes */
+/* ===================================================
+   GRILLE DE CARTES (ACCUEIL)
+   =================================================== */
 .grid-section {
     padding: 60px 20px;
     background-color: #1a1816;
@@ -106,14 +110,15 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Survol des cartes (bordure et texte orange) */
 .grid-card:hover {
     border-color: #ff8c00;
     color: #ff8c00;
     transform: translateY(-2px);
 }
 
-/* Page À Propos */
+/* ===================================================
+   PAGE À PROPOS & CV
+   =================================================== */
 .about-hero {
     display: flex;
     justify-content: space-between;
@@ -150,8 +155,8 @@ body {
 
 .cv-btn {
     display: inline-block;
-    background-color: #7a5833;  /* Fond marron */
-    color: #ffffff;             /* Texte blanc */
+    background-color: #7a5833;
+    color: #ffffff;
     border: 1px solid #7a5833;
     padding: 10px 28px;
     border-radius: 8px;
@@ -161,12 +166,14 @@ body {
 }
 
 .cv-btn:hover {
-    background-color: #5a3f23;  /* Marron plus foncé au survol */
+    background-color: #5a3f23;
     border-color: #5a3f23;
-    transform: scale(1.05);      /* Légère animation au survol */
+    transform: scale(1.05);
 }
 
-/* Points Forts (Jauges) */
+/* ===================================================
+   POINTS FORTS (JAUGES) & BANDEROLE
+   =================================================== */
 .skills-section {
     max-width: 600px;
     margin: 40px auto;
@@ -205,7 +212,6 @@ body {
     background-color: #7a5833;
 }
 
-/* Bandeau défilant centres d'intérêt */
 .interests-header {
     color: #7a5833;
     margin-top: 40px;
@@ -226,7 +232,9 @@ body {
     justify-content: space-around;
 }
 
-/* Section Expériences */
+/* ===================================================
+   SECTION EXPÉRIENCES & ANIMATION
+   =================================================== */
 .experiences-section {
     max-width: 800px;
     margin: 40px auto;
@@ -263,29 +271,22 @@ body {
     padding: 0;
 }
 
-/* --- Modifiez ce bloc existant dans style.css --- */
 .task-list li {
     background-color: #7a5833;
     color: #fff;
     padding: 12px 16px;
     margin-bottom: 10px;
     border-radius: 4px;
-    
-    /* --- Ajoutez ces lignes pour l'animation --- */
-    opacity: 0;                    /* Invisible au départ */
-    transform: translateX(20px);    /* Décalé à droite */
-    animation: fadeRight 0.5s ease forwards; /* Lancement de l'animation */
+    opacity: 0;
+    transform: translateX(20px);
+    animation: fadeRight 0.5s ease forwards;
 }
 
-/* --- Ajoutez ce bloc de cascade (Staggered animation) juste après --- */
-/* Chaque élément a son propre délai pour créer un effet de cascade */
 .task-list li:nth-child(1) { animation-delay: 0.1s; }
 .task-list li:nth-child(2) { animation-delay: 0.2s; }
 .task-list li:nth-child(3) { animation-delay: 0.3s; }
 .task-list li:nth-child(4) { animation-delay: 0.4s; }
-/* Si vous en avez plus, continuez la logique li:nth-child(5)... */
 
-/* --- Ajoutez la définition de l'animation Keyframes tout à la fin de style.css --- */
 @keyframes fadeRight {
     from {
         opacity: 0;
@@ -293,157 +294,147 @@ body {
     }
     to {
         opacity: 1;
-        transform: translateX(0); /* Position normale */
+        transform: translateX(0);
     }
 }
 
-/* --- Page Compétences --- */
-
+/* ===================================================
+   PAGE COMPÉTENCES (ACCORDÉON / DÉROULANT COMPLET)
+   =================================================== */
 .skills-hero {
     text-align: center;
     padding: 60px 20px;
 }
 
 .skills-hero h2 {
-    color: #c29968;
-    font-size: 52px;
+    color: #e6c687;
+    font-size: 42px;
     font-weight: 300;
     line-height: 1.2;
     margin: 0;
 }
 
 .skills-category {
-    max-width: 700px;
+    max-width: 800px;
     margin: 40px auto;
     padding: 0 20px;
-    text-align: center;
+    text-align: left;
 }
 
 .category-badge {
     display: inline-block;
     background-color: #7a5833;
-    color: #000;
+    color: #ffffff;
     font-weight: 600;
-    padding: 12px 24px;
+    padding: 8px 18px;
     border-radius: 4px;
-    margin-bottom: 30px;
-    font-size: 16px;
+    margin-bottom: 25px;
+    font-size: 15px;
 }
 
 .accordion-container {
-    .accordion-item,
-.accordion-header {
-    background-color: #1a1a1a !important;
-    border: 1px solid #333333 !important;
-    border-left: 4px solid #e6c687 !important;
-    border-radius: 8px !important;
-    margin-bottom: 15px !important;
-    padding: 20px !important;
-}
-
-/* Titre des blocs (ex: Gérer le patrimoine informatique) */
-.accordion-header,
-.accordion-title,
-.accordion-container h3,
-.accordion-container button {
-    color: #e6c687 !important;
-    font-size: 1.2rem !important;
-    font-weight: bold !important;
-    text-align: left !important;
-}
-
-/* Texte descriptif dans les blocs */
-.accordion-content,
-.accordion-container p,
-.accordion-container span {
-    color: #cccccc !important;
-    font-size: 0.95rem !important;
-    line-height: 1.6 !important;
-    text-align: left !important;
-}
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
+/* Élément parent <details> */
 .accordion-item {
-    background-color: #221f1c;
-    border: 1px solid #332d27;
-    border-radius: 12px;
+    background-color: #1a1a1a;
+    border: 1px solid #333333;
+    border-left: 4px solid #e6c687;
+    border-radius: 8px;
     overflow: hidden;
-    text-align: left;
-    transition: background-color 0.3s ease;
+    transition: border-color 0.3s ease;
 }
 
+/* En-tête du menu déroulant <summary> */
 .accordion-header {
+    padding: 18px 20px;
+    color: #e6c687;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 18px 24px;
-    color: #e0d8c3;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    list-style: none; /* Masque la flèche par défaut du HTML */
+    list-style: none;
+    user-select: none;
 }
 
+/* Masquer le triangle par défaut */
 .accordion-header::-webkit-details-marker {
-    display: none; /* Masque la flèche Safari/Chrome */
+    display: none;
 }
 
-.accordion-header .icon {
-    color: #c29968;
-    font-size: 20px;
-    transition: transform 0.3s ease;
+/* Icône '+' tournante */
+.accordion-icon {
+    font-size: 1.2rem;
+    color: #e6c687;
+    transition: transform 0.2s ease;
 }
 
-/* Changement de l'icône lors de l'ouverture */
-.accordion-item[open] .icon {
-    transform: rotate(45deg); /* Le '+' pivote pour former une croix/moins */
+.accordion-item[open] .accordion-icon {
+    transform: rotate(45deg);
 }
 
+/* Contenu interne dévoilé */
 .accordion-content {
-    padding: 0 24px 20px 24px;
-    color: #b5a895;
-    font-size: 14px;
+    padding: 20px;
+    border-top: 1px solid #333333;
+    color: #cccccc;
+    font-size: 0.95rem;
     line-height: 1.6;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    margin-top: 5px;
-    padding-top: 15px;
 }
 
-/* Cartes d'informations / Référentiel BTS SIO */
-.skills-blocks-container {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 0 20px;
+.accordion-desc {
+    margin: 0 0 15px 0;
+}
+
+/* Boîte du document / Lien PDF */
+.doc-box {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #242424;
+    padding: 12px 16px;
+    border-radius: 6px;
+    border: 1px solid #3d3d3d;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-.info-card {
-    background-color: #ffffff;  /* Fond blanc */
-    border-radius: 8px;
-    padding: 24px 30px;
-    text-align: center;         /* Aligne le texte au centre */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+.doc-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.info-card h3 {
-    color: #1a1816;             /* Titre foncé pour contraster avec le blanc */
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 10px;
+.doc-title {
+    color: #e0e0e0;
+    font-size: 0.9rem;
 }
 
-.info-card p {
-    color: #333333;             /* Texte foncé */
-    font-size: 14px;
-    margin: 0;
-    line-height: 1.5;
+.doc-link {
+    display: inline-block;
+    padding: 6px 14px;
+    background-color: #e6c687;
+    color: #121212;
+    font-weight: bold;
+    font-size: 0.85rem;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
+.doc-link:hover {
+    background-color: #ffffff;
+    transform: translateY(-1px);
+}
+
+/* ===================================================
+   FORMATIONS & MÉDIAS
+   =================================================== */
 .trainings-container {
     display: flex;
     flex-direction: column;
@@ -453,7 +444,6 @@ body {
     padding: 0 20px;
 }
 
-/* Carte de formation */
 .training-card {
     display: flex;
     align-items: center;
@@ -468,7 +458,6 @@ body {
     flex-direction: row-reverse;
 }
 
-/* Zone Média */
 .training-media {
     position: relative;
     flex: 1.2;
@@ -479,7 +468,6 @@ body {
     background-color: #000;
 }
 
-/* Affichage du PDF dans l'encadré */
 .training-media object,
 .training-media iframe,
 .training-media img {
@@ -490,7 +478,6 @@ body {
     display: block;
 }
 
-/* Bouton Télécharger positionné en bas à droite */
 .download-btn {
     position: absolute;
     bottom: 12px;
@@ -517,7 +504,6 @@ body {
     border-color: #007bff;
 }
 
-/* Zone Texte */
 .training-text {
     flex: 1;
     text-align: left;
@@ -535,26 +521,9 @@ body {
     color: #ccc;
 }
 
-/* Version mobile */
-@media (max-width: 768px) {
-    .training-card,
-    .training-card.reverse {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .training-text {
-        text-align: center;
-    }
-}
-        height: 250px;
-    }
-}
-
 /* ===================================================
    SECTION VEILLE INFORMATIQUE
    =================================================== */
-
 .watch-section {
     padding: 30px 20px;
     color: #ffffff;
@@ -567,7 +536,7 @@ body {
 
 .watch-container h3 {
     font-size: 1.8rem;
-    color: #e6c687; /* Couleur dorée harmonisée avec le titre */
+    color: #e6c687;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -594,7 +563,6 @@ body {
     margin-bottom: 10px;
 }
 
-/* Grilles pour les axes et la méthodologie */
 .axes-grid,
 .methodology-grid {
     display: grid;
@@ -603,7 +571,6 @@ body {
     margin-top: 20px;
 }
 
-/* Cartes sombres adaptées au thème */
 .axis-card,
 .method-card {
     background-color: #1a1a1a;
@@ -634,7 +601,6 @@ body {
     line-height: 1.5;
 }
 
-/* Tendance surveillée */
 .trend-card {
     background-color: #1a1a1a;
     border: 1px solid #333;
@@ -660,7 +626,6 @@ body {
 /* ===================================================
    SECTION ENTREPRISE & STAGE
    =================================================== */
-
 .company-section {
     padding: 30px 20px;
     color: #ffffff;
@@ -674,173 +639,190 @@ body {
 .company-header-card,
 .info-card,
 .report-card {
-    background-color: #1a1a1a !important;
-    border: 1px solid #333333 !important;
-    color: #ffffff !important;
-    text-align: left !important;
+    background-color: #1a1a1a;
+    border: 1px solid #333333;
+    color: #ffffff;
+    text-align: left;
+    border-radius: 8px;
+    padding: 24px;
 }
 
 .company-header-card {
-    border-left: 4px solid #e6c687 !important;
-    padding: 30px !important;
-    text-align: center !important;
+    border-left: 4px solid #e6c687;
+    padding: 30px;
+    text-align: center;
 }
 
 .badge {
-    display: inline-block !important;
-    background-color: #e6c687 !important;
-    color: #121212 !important;
-    font-weight: bold !important;
-    padding: 4px 10px !important;
-    border-radius: 4px !important;
-    margin-bottom: 12px !important;
+    display: inline-block;
+    background-color: #e6c687;
+    color: #121212;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-bottom: 12px;
 }
 
 .info-card h4 {
-    color: #e6c687 !important;
-    font-size: 1.2rem !important;
-    margin-bottom: 15px !important;
-    text-align: left !important;
+    color: #e6c687;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    text-align: left;
 }
 
 .info-card ul {
-    padding-left: 20px !important;
-    margin: 0 !important;
-    text-align: left !important;
+    padding-left: 20px;
+    margin: 0;
+    text-align: left;
 }
 
 .info-card li {
-    color: #cccccc !important;
-    font-size: 0.95rem !important;
-    line-height: 1.6 !important;
-    margin-bottom: 10px !important;
-    text-align: left !important;
+    color: #cccccc;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    text-align: left;
 }
 
 .info-card li strong {
-    color: #ffffff !important;
+    color: #ffffff;
 }
 
-/* Correctif Bouton de Téléchargement */
 .report-card {
-    border: 1px solid #e6c687 !important;
-    padding: 25px 30px !important;
-    text-align: center !important;
+    border: 1px solid #e6c687;
+    padding: 25px 30px;
+    text-align: center;
 }
 
 .report-text h3 {
-    color: #ffffff !important;
+    color: #ffffff;
 }
 
 .report-text p {
-    color: #cccccc !important;
+    color: #cccccc;
 }
 
 .report-download-btn {
-    display: inline-block !important;
-    background-color: #e6c687 !important;
-    color: #121212 !important;
-    font-weight: bold !important;
-    padding: 12px 24px !important;
-    border-radius: 6px !important;
-    text-decoration: none !important;
-    margin-top: 15px !important;
+    display: inline-block;
+    background-color: #e6c687;
+    color: #121212;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 15px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
-
-.report-download-btn:hover {
-    background-color: #ffffff !important;
-    color: #121212 !important;
-}}
 
 .report-download-btn:hover {
     background-color: #ffffff;
     transform: translateY(-2px);
 }
 
-/* Définition des variables héritées de ton thème */
+/* ===================================================
+   TABLEAU DE DOCUMENTS
+   =================================================== */
 #documents {
-  --doc-bg: var(--card-bg, #1a1a1a);
-  --doc-header-bg: var(--header-bg, #252525);
-  --doc-hover-bg: var(--hover-bg, #2a2a2a);
-  --doc-border: var(--border-color, #333333);
-  --doc-text: var(--text-color, #ffffff);
-  --doc-text-muted: var(--text-muted, #a0a0a0);
-  --doc-accent: var(--accent-color, #007acc);
+    --doc-bg: #1a1a1a;
+    --doc-header-bg: #252525;
+    --doc-hover-bg: #2a2a2a;
+    --doc-border: #333333;
+    --doc-text: #ffffff;
+    --doc-text-muted: #a0a0a0;
+    --doc-accent: #e6c687;
 
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 20px;
-  color: var(--doc-text);
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    color: var(--doc-text);
 }
 
 #documents h2 {
-  text-align: center;
-  color: var(--doc-text);
-  margin-bottom: 25px;
-  font-size: 1.8rem;
+    text-align: center;
+    color: var(--doc-text);
+    margin-bottom: 25px;
+    font-size: 1.8rem;
 }
 
-/* Style du Tableau */
 #documents table {
-  width: 100%;
-  border-collapse: collapse;
-  background-color: var(--doc-bg);
-  border: 1px solid var(--doc-border);
-  border-radius: 8px;
-  overflow: hidden;
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--doc-bg);
+    border: 1px solid var(--doc-border);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-/* En-tête du tableau */
 #documents th {
-  background-color: var(--doc-header-bg);
-  color: var(--doc-text);
-  text-transform: uppercase;
-  font-size: 0.85rem;
-  letter-spacing: 1px;
-  padding: 15px;
-  text-align: left;
-  border-bottom: 2px solid var(--doc-border);
+    background-color: var(--doc-header-bg);
+    color: var(--doc-text);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    padding: 15px;
+    text-align: left;
+    border-bottom: 2px solid var(--doc-border);
 }
 
-/* Cellules */
 #documents td {
-  padding: 14px 15px;
-  border-bottom: 1px solid var(--doc-border);
-  font-size: 0.95rem;
+    padding: 14px 15px;
+    border-bottom: 1px solid var(--doc-border);
+    font-size: 0.95rem;
 }
 
-/* Survol des lignes */
 #documents tbody tr:hover {
-  background-color: var(--doc-hover-bg);
+    background-color: var(--doc-hover-bg);
 }
 
-/* Liens des PDF */
 #documents a {
-  color: var(--doc-accent);
-  text-decoration: none;
-  font-weight: 600;
-  transition: opacity 0.2s ease;
+    color: var(--doc-accent);
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity 0.2s ease;
 }
 
 #documents a:hover {
-  opacity: 0.8;
-  text-decoration: underline;
+    opacity: 0.8;
+    text-decoration: underline;
 }
 
-/* Séparateur et note */
 #documents hr {
-  border: none;
-  height: 1px;
-  background-color: var(--doc-border);
-  margin: 30px 0 20px 0;
+    border: none;
+    height: 1px;
+    background-color: var(--doc-border);
+    margin: 30px 0 20px 0;
 }
 
 #documents blockquote {
-  background-color: var(--doc-header-bg);
-  border-left: 4px solid var(--doc-accent);
-  margin: 0;
-  padding: 12px 20px;
-  border-radius: 0 6px 6px 0;
-  color: var(--doc-text-muted);
-  font-size: 0.9rem;
+    background-color: var(--doc-header-bg);
+    border-left: 4px solid var(--doc-accent);
+    margin: 0;
+    padding: 12px 20px;
+    border-radius: 0 6px 6px 0;
+    color: var(--doc-text-muted);
+    font-size: 0.9rem;
+}
+
+/* ===================================================
+   RESPONSIVE DESIGN (MOBILES & TABLETTES)
+   =================================================== */
+@media (max-width: 768px) {
+    .training-card,
+    .training-card.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .training-text {
+        text-align: center;
+    }
+
+    .training-media {
+        height: 250px;
+    }
+
+    .about-hero {
+        flex-direction: column;
+        gap: 20px;
+    }
 }
